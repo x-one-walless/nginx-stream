@@ -23,6 +23,8 @@ RUN mkdir /opt/nginx/http.conf.d && mkdir /opt/nginx/stream.conf.d
 ADD nginx.conf /opt/nginx/conf/nginx.conf
 ADD zero_downtime_reload.sh /opt/nginx/sbin/zero_downtime_reload.sh
 
+RUN wget https://raw.githubusercontent.com/bagder/ca-bundle/master/ca-bundle.crt > /etc/nginx/ca-bundle.crt
+
 WORKDIR /
 
 EXPOSE 80 443
