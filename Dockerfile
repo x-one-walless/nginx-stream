@@ -10,7 +10,7 @@ WORKDIR /opt
 RUN wget http://nginx.org/download/nginx-1.21.3.tar.gz && \
     tar -zxvf nginx-1.*.tar.gz && \
     cd nginx-1.* && \
-    ./configure --prefix=/opt/nginx --user=nginx --group=nginx --with-ipv6 --with-threads --with-stream=dynamic --with-stream_realip_module && \
+    ./configure --prefix=/opt/nginx --user=nginx --group=nginx --with-ipv6 --with-threads --with-stream --with-stream_realip_module && \
     make && make install && \
     cd .. && rm -rf nginx-1.*
 
